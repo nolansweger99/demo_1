@@ -1,23 +1,25 @@
-TITLE = "jumpy"
+TITLE = "GAME OF JUMPS"
 # screen dims
 WIDTH = 480
 HEIGHT = 600
 # frames per second
 FPS = 60
 # colors
+DIM_GRAY = (105, 105, 105)
+MEDIUM_SEA_GREEN = (60, 179, 113)
 WHITE = (255, 255, 255)
 BLACK = (0,0,0)
 REDDISH = (240,55,66)
-SKY_BLUE = (143, 185, 252)
+SKY_BLUE = (10, 22, 90)
 FONT_NAME = 'arial'
 SPRITESHEET = "spritesheet_jumper.png"
-SPRITESHEET2 = "spritesheet.png"
+SPRITESHEET2 = ""
 # data files
 HS_FILE = "highscore.txt"
 # player settings
 PLAYER_ACC = 0.5
 PLAYER_FRICTION = -0.12
-PLAYER_GRAV = 0.8
+PLAYER_GRAV = 0.6
 PLAYER_JUMP = 20
 # game settings
 BOOST_POWER = 60

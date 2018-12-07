@@ -104,7 +104,7 @@ class Game:
             c = Cloud(self)
             c.rect.y += 500
         # load music
-        pg.mixer.music.load(path.join(self.snd_dir, 'game_music_2.ogg'))
+        pg.mixer.music.load(path.join(self.snd_dir, 'gamemusic_3.ogg'))
         # call the run method
         self.run()
     def run(self):
@@ -244,11 +244,11 @@ class Game:
                     waiting = False
     def show_start_screen(self):
         """ # game splash screen """
-        self.screen.fill(REDDISH)
-        self.draw_text(TITLE, 48, WHITE, WIDTH/2, HEIGHT/4)
-        self.draw_text("WASD to move, Space to jump", 22, WHITE, WIDTH/2, HEIGHT/2)
-        self.draw_text("Press any key to play...", 22, WHITE, WIDTH / 2, HEIGHT * 3/4)
-        self.draw_text("High score " + str(self.highscore), 22, WHITE, WIDTH / 2, 15)
+        self.screen.fill(DIM_GRAY)
+        self.draw_text(TITLE, 48, SKY_BLUE, WIDTH/2, HEIGHT/4)
+        self.draw_text("WASD to move, Space to jump", 22, BLACK, WIDTH/2, HEIGHT/2)
+        self.draw_text("Press any key to play...", 22, REDDISH, WIDTH / 2, HEIGHT * 3/4)
+        self.draw_text("High score " + str(self.highscore), 22, SKY_BLUE, WIDTH / 2, 15)
         pg.display.flip()
         self.wait_for_key()
     def show_go_screen(self):
@@ -256,10 +256,10 @@ class Game:
         if not self.running:
             print("not running...")
             return
-        self.screen.fill(BLACK)
-        self.draw_text(TITLE, 48, WHITE, WIDTH/2, HEIGHT/4)
-        self.draw_text("WASD to move, Space to jump", 22, WHITE, WIDTH/2, HEIGHT/2)
-        self.draw_text("Press any key to play...", 22, WHITE, WIDTH / 2, HEIGHT * 3/4)
+        self.screen.fill(REDDISH)
+        self.draw_text("YOU SUCK", 48, SKY_BLUE, WIDTH/2, HEIGHT/4)
+        self.draw_text("WASD to move, Space to jump", 22, SKY_BLUE, WIDTH/2, HEIGHT/2)
+        self.draw_text("Press any key to play...", 22, BLACK, WIDTH / 2, HEIGHT * 3/4)
         self.draw_text("High score " + str(self.highscore), 22, WHITE, WIDTH / 2, HEIGHT/2 + 40)
         if self.score > self.highscore:
             self.highscore = self.score
